@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+h1 {
+    margin: 10px;
+}
+
+.placeholder {
+    margin: 64px;
+}
+
+
+
+.password {
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 380px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center; 
+}
+
+.password::placeholder {
+    color: #9e9e9e;
+    font-size: 12px;
+    text-align: center;
+}
+
+.password:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+
+.password-button {
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #1e88e5, #1976d2);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.password-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #2196F3, #1e88e5);
+}
+
+.password-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.password-button:first-of-type {
+    background: linear-gradient(145deg, #43a047, #388e3c);
+}
+
+.password-button:first-of-type:hover {
+    background: linear-gradient(145deg, #4caf50, #43a047);
+}
+
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(145deg, #333, #222);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
